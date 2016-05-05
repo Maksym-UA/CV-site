@@ -1,0 +1,156 @@
+html, body {
+  	min-height: 100%;
+ 	font-weight: 300;
+  	line-height: 1.5;
+	margin: 0px;
+}
+
+.page{
+	display:flex;
+	
+}
+#header {
+	z-index: 1;
+	position: fixed;
+	width: 100%;
+	
+	height: 50px;
+	background: linear-gradient(to bottom, #8c8c8c, #595959);
+}
+
+#header a:hover {
+	font-weight: bold;
+}
+
+#name {
+	float:left;
+	margin-left: 10px;
+	margin-top: 10px;
+	padding-top: 0px;
+	font-size: 20px;
+	font-family: Verdana, sans-serif;
+	color: #ffffff;
+}
+
+#email{
+	float:right;
+	margin-right: 10px;
+	margin-top: 10px;
+	padding-top: 1px;
+	font-size: 20px;
+	font-family: Verdana, sans-serif;
+	color: #ffffff;
+}
+
+h4 {
+	margin-left: 5px;
+	margin-bottom: 15px;
+	font-family: Verdana, sans-serif;
+}
+
+
+.left {
+	position: relative;
+	width: 11%;
+	float: left;
+	margin: 70px 15px 10px 3px;
+	border-right: 3px solid #595959;
+	padding-right: 1px;
+}
+
+.menu{
+	
+	position: fixed;
+	height: 200px;
+	width: 11%;
+	font-family: Garamond, serif;
+	text-align: center;
+	font-size: 1.2em;
+	margin-left: -2px;
+	margin-top: -2px;
+}
+
+.menu tr{
+	
+	background: linear-gradient(to bottom, #8c8c8c, #595959);
+}
+
+.menu a {
+  	cursor: pointer;
+  	position: relative;
+	text-decoration: none;
+	color: #000000;
+}
+
+.menu a:active{ top:2px;}
+
+
+.menu a:hover{
+	color: white;
+} 
+
+.right {
+	position: relative;
+	float: right;
+	margin-top: 50px;
+	width: 88%;
+	background: #ffffff;
+	margin-bottom: 10px;
+	font-size: 17px;
+}
+
+.right p {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: -11px;
+	font-family: Garamond, serif;
+	color: #000000;
+}
+
+ul {
+	margin-top: -10px;
+	list-style-type: square;
+	font-family: Garamond, serif;
+}
+
+
+.right a{ 
+	color: #000000;
+}
+
+.right a:hover {
+	font-weight: bold;
+}
+
+.footer {
+	height: 50px;
+	background: #595959;
+	position:relative;
+	text-align: center;
+}
+
+.addres{
+	padding-top:15px;
+	display: inline-block;
+}
+
+.addres p {
+	font-family: Verdana, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	color: #ffffff;
+	margin:0px;
+}
+
+.social_media  {
+	display: inline-block;
+	padding-top:15px;
+	float: right;
+}
+
+.social_media  img {
+	width: 24px;
+	height: 24px;
+	padding-left:3px;
+	padding-right:25px;
+}
