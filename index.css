@@ -1,156 +1,258 @@
-html, body {
-  	min-height: 100%;
- 	font-weight: 300;
-  	line-height: 1.5;
-	margin: 0px;
-}
 
-.page{
-	display:flex;
+
+body {margin:0;}
+
+* {   box-sizing: border-box;}
+
+
+header {
+	display: inline;
+	padding: 0px;
 	
-}
-#header {
-	z-index: 1;
-	position: fixed;
+	background-image: url("imForSite/w306img.jpg");
+	}
+
+header img{
 	width: 100%;
+	margin: auto;
+	display: block;
 	
-	height: 50px;
-	background: linear-gradient(to bottom, #8c8c8c, #595959);
 }
 
-#header a:hover {
-	font-weight: bold;
+canvas { 
+		display: block; 
+		width: 100%;
+		height: 250px;
+		margin-right:0px;
 }
-
-#name {
-	float:left;
-	margin-left: 10px;
-	margin-top: 10px;
-	padding-top: 0px;
-	font-size: 20px;
-	font-family: Verdana, sans-serif;
-	color: #ffffff;
-}
-
-#email{
-	float:right;
-	margin-right: 10px;
-	margin-top: 10px;
-	padding-top: 1px;
-	font-size: 20px;
-	font-family: Verdana, sans-serif;
-	color: #ffffff;
-}
-
-h4 {
-	margin-left: 5px;
-	margin-bottom: 15px;
-	font-family: Verdana, sans-serif;
+	
+#content { 
+		margin-bottom:-5px;
+		min-width: 250px; 
+		/*overflow: auto;*/
 }
 
 
-.left {
+ul.topnav {
 	position: relative;
-	width: 11%;
+	/*z-index:1;*/
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+	/*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 8px 0 rgba(0, 0, 0, 0.19);*/
+}
+
+ul.topnav li {
+	position: relative;
 	float: left;
-	margin: 70px 15px 10px 3px;
-	border-right: 3px solid #595959;
-	padding-right: 1px;
 }
 
-.menu{
-	
-	position: fixed;
-	height: 200px;
-	width: 11%;
-	font-family: Garamond, serif;
-	text-align: center;
-	font-size: 1.2em;
-	margin-left: -2px;
-	margin-top: -2px;
+#logo{	
+	width: 76px;
+	padding: 0px 10px 0px 10px;
 }
 
-.menu tr{
-	
-	background: linear-gradient(to bottom, #8c8c8c, #595959);
+#myTopnav li.languages{
+	float: right;
 }
 
-.menu a {
-  	cursor: pointer;
-  	position: relative;
-	text-decoration: none;
-	color: #000000;
+
+
+ul.topnav li a {
+	position: relative;
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: 17px;
 }
 
-.menu a:active{ top:2px;}
 
 
-.menu a:hover{
-	color: white;
+ul.topnav li a:link {
+	color:white;
 } 
 
-.right {
-	position: relative;
-	float: right;
-	margin-top: 50px;
-	width: 88%;
-	background: #ffffff;
-	margin-bottom: 10px;
-	font-size: 17px;
+
+ul.topnav li:not(:last-child) a:hover, ul.topnav li:not(:last-child) li a:active {
+	z-index:3;
+	background-color: #e6e6e6;
+	color: black;
 }
 
-.right p {
-	margin-left: 5px;
-	margin-right: 5px;
-	margin-top: -11px;
-	font-family: Garamond, serif;
+ul.topnav li.icon {display: none;}
+
+header #myTopnav li.icon img{
+	margin: 0;
+	width:25px;
+}
+
+#myTopnav .active{
+	background-color: #009933;
+	color: white;
+}
+
+/*---------------------------------media query--------------------*/
+
+@media screen and (max-width:680px) {
+  ul.topnav li{display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+	z-index:3;
+  }
+}
+
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+	z-index:5;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+	
+	
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: center;
+	
+  }
+  
+	.main .col-sm-8 .col-sm-4
+	{
+		width: 200px;
+		
+	}
+	
+	#myTopnav li.languages{
+		float: none;
+	}
+}
+
+/*--------------------------------main section-------------------------------*/
+
+
+.main{
+	background: #f2f2f2;
+}
+
+
+.main .col-sm-2{
+	display: block;
+}
+
+
+.main .goUpButton :nth-child(1){
+	padding-top:10%;
+	margin-bottom: -8px;
+	
+}
+a.goUpButton{
+	display: none;
+	width:60px;
+	height: 60px;
+	color: white;
+	position:fixed;
+	margin:auto;
+	right: 6%;
+	bottom: 140px;
+	z-index: 3;
+	background: #000000; 
+	box-shadow: 0 6px 16px 0 rgba(0,0,0,0.5), 0 6px 20px 0 rgba(0,0,0,0.25);
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	
+}
+
+a:hover.goUpButton {
+	background:#009933;
+	color: white;
+}
+
+
+.main .col-sm-8{
+	background:#ffffff;
+	padding:45px 35px 0px 35px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.col-sm-8 .col-sm-10, .col-sm-8 .col-sm-12{
+	padding:5px 15px 5px 0px;
+	margin: 15px 0px 25px 0px;
+	/*box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);*/ 
+}
+
+.col-sm-8 .col-sm-4{
+	width: 30%;
+	padding: 1px 10px 1px 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	color: #000000;
+	background-color: #ffffff;
 }
 
-ul {
-	margin-top: -10px;
-	list-style-type: square;
-	font-family: Garamond, serif;
+/*-----------------------footer--------------------*/
+
+footer {
+  font-size: 12px;
+  width:100%;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+footer .row{
+	padding: 10px;
+}
+
+footer .row ul {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	margin-top: 10px;
+	padding-left: 0px;
+}
+
+footer .col-sm-4{
+	/*padding: 15px;*/
+	vertical-align: middle;
+	
+}
+
+footer .row ul .col-sm-2 {
+  list-style: none;
+  padding:5px 0px 5px 0px;
+  text-align: center;
+  /*margin: auto;*/
+ }
+
+footer .row div:nth-child(2){
+	border-right: 1px solid #333333;
+	border-left: 1px solid #333333;
 }
 
 
-.right a{ 
-	color: #000000;
+footer li  img{
+  width: 28px;
+  background: black;
 }
 
-.right a:hover {
-	font-weight: bold;
+footer #logo{
+	vertical-align: middle;
+	padding: 0px;
+	width: 150px;
 }
 
-.footer {
-	height: 50px;
-	background: #595959;
-	position:relative;
-	text-align: center;
-}
 
-.addres{
-	padding-top:15px;
-	display: inline-block;
-}
-
-.addres p {
-	font-family: Verdana, sans-serif;
-	font-size: 14px;
-	text-align: center;
-	color: #ffffff;
-	margin:0px;
-}
-
-.social_media  {
-	display: inline-block;
-	padding-top:15px;
-	float: right;
-}
-
-.social_media  img {
-	width: 24px;
-	height: 24px;
-	padding-left:3px;
-	padding-right:25px;
+footer .col-sm-4 #qoo-counter{
+	float:right;
+	margin: 15px 0px 15px 0px;
 }
