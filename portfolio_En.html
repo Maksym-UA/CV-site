@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 	<head>
-		<title>Maksym Savin_Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="Maksym Savin" content="Presentation website">
-		 <!-- css -->
+		<meta charset="utf-8">
+		<meta name="description" content="Maksym Savin personal website">
+		<meta name="Maksym Savin" content="//pydega.com">
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="mobile-web-app-capable" content="yes">
+			
+		<title>Maksym Savin</title>
+		
+		<!-- css -->
 		<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="portfolio.css">
 		<link href="lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-		
-		<!--[if lt IE 9]>
-		<script type="text/javascript">alert("Your browser does not support the canvas tag.");</script>
-		<![endif]-->
-		<script src="processing.js" type="text/javascript"></script>
-		<script type="text/javascript">
-		// convenience function to get the id attribute of generated sketch html element
-		function getProcessingSketchId () { return 'w304edited'; }
-		</script>
-		
+		<link rel="shortcut icon" type="image/png" href="imForSite/logo2_favicon.png">
 	</head>
 
 	<body>
@@ -51,14 +45,40 @@
 			
 		<section class="main">
 		
+			<!-- Trailer Video Modal -->
+			<div class="modal" id="trailer">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<a href="#" class="hanging-close" data-dismiss="modal" aria-hidden="true">
+							<img src="https://lh5.ggpht.com/v4-628SilF0HtHuHdu5EzxD7WRqOrrTIDi_MhEG6_qkNtUK5Wg7KPkofp_VJoF7RS2LhxwEFCO1ICHZlc-o_=s0#w=24&h=24"/>
+						</a>
+						<div class="scale-media" id="trailer-video-container">
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		
 			<div class="container-fluid text-center" id="mainContainer">
 					
-				<div class "row">
+				<div class ="row" id="gallerySelection">
 						<ul id="Menu">
 							<li id="leftMenuItem"><a href="#" id="selectAll">All</a></li>
+							<li id="leftMenuItem"> <a href="#" id="webSel">Web</a></li>
 							<li id="leftMenuItem"> <a href="#" id="graphicSel">Graphic</a></li>
 							<li id="leftMenuItem"><a href="#" id="animSel">Animation</a></li>
 							<li id="leftMenuItem"><a href="#" id="logoSel">Logo</a></li>
+						</ul>
+				</div>
+				
+				
+				<div class ="row" id="mobileSelection">
+						<ul id="menuMobile">
+							<li id="mobileSelectionItem"><a href="#" id="mselectAll"><img src="imForSite/all.png"></a></li>
+							<li id="mobileSelectionItem"> <a href="#" id="mwebSel"><img src="imForSite/web.png"></a></li>
+							<li id="mobileSelectionItem"> <a href="#" id="mgraphicSel"><img src="imForSite/images.png"></a></li>
+							<li id="mobileSelectionItem"><a href="#" id="manimSel"><img src="imForSite/play.png"></a></li>
+							<li id="mobileSelectionItem"><a href="#" id="mlogoSel"><img src="imForSite/logoselec.png"></a></li>
 						</ul>
 				</div>
 					
@@ -70,132 +90,178 @@
 					
 					
 					<div class="col-sm-12" id="portfolio">
+					
+						<div class="row web">
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
+								<a class="gallery-item" href="Rendered_Images/MovieSite.png"  data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+									<img class="thumbnail" src="Portfolio_web_size/MovieSite_web.jpg" alt="screenshot of movielist project"/>
+								</a>
+								<p><a href="http://msmovielist.biz.ht/" target="_blank"><h4>Movie Site</h4></a></p>
+							</div>
+							
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
+								<a class="gallery-item" href="Rendered_Images/BikeRental.png"  data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+									<img class="thumbnail" src="Portfolio_web_size/BikeRental_web.jpg" alt="screenshot of movielist project"/>
+								</a>
+								<p><a href="http://pydega.biz.ht/" target="_blank"><h4>Bike Rental</h4></a></p>
+							</div>
+						
+						</div>
+						
+						<div class="row picture">
+							<h2 class="rowName">Graphic</h2>
+						
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
+								<a class="gallery-item" href="Rendered_Images/yard_final.jpg"  data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+									<img class="thumbnail" src="Portfolio_web_size/yard_final_web.jpg" alt="image of a ring with blue stone"/>
+								</a>	
+							</div>
+						
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
+								<a class="gallery-item" href="Rendered_Images/Sphere4.jpg"  data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+									<img class="thumbnail" src="Portfolio_web_size/Sphere4_web.png" alt="image of a ring with blue stone"/>
+								</a>	
+							</div>
+						
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
+								<a class="gallery-item" href="Rendered_Images/Ring.jpg"  data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+									<img class="thumbnail" src="Portfolio_web_size/Ring_web.png" alt="image of a ring with blue stone"/>
+								</a>	
+							</div>
+						
+							
+						</div>
+						
+						
 						<div class="row picture">
 						
-							<div class="col-sm-4" id="lineObject">
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
 								<a class="gallery-item" href="Rendered_Images/Room.jpg"  data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/Room-web.jpg" alt="image of a furnitured room"/>
 								</a>	
 							</div>
-							
-							<div class="col-sm-4" id="lineObject">
+						
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
 								<a class="gallery-item" href="Rendered_Images/waterSplash.png"  data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/waterSplash.png" alt="image of two belpepers thrown into water"/>
 								</a>
 							</div>
-																
-							<div class="col-sm-4" id="lineObject">
-								<a class="gallery-item" href="Rendered_Images/Izbushka.png"  data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+						
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
+								<a class="gallery-item" href="Rendered_Images/Izbushka.jpg"  data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/Izbushka.jpg" alt="3D animation of fantasy log house"/>
 								</a>
 							</div>
-						</div>
 						
+							
+						</div>
 						
 						<div class="row picture">
 						
-							<div class="col-sm-4" id="lineObject">
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
 								<a class="gallery-item" href="Rendered_Images/GlowingBalls.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/GlowingBalls.png" alt=""/>
 								</a>
 							</div>
-							
-							<div class="col-sm-4" id="lineObject">
-								<a class="gallery-item" href="Rendered_Images/CarvedText.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<img class="thumbnail" src="Portfolio_web_size/CarvedText.png" alt=""/>
-								</a>
-							</div>
-							
-							<div class="col-sm-4" id="lineObject">
+						
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
 								<a class="gallery-item" href="Rendered_Images/FootballBall.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/FootballBall.jpg" alt=""/>
 								</a>
 							</div>
-						</div>
-						
-						<div class="row picture">
-						
-							<div class="col-sm-4" id="lineObject">
-								<a class="gallery-item" href="Rendered_Images/GlossyText.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
-									<img class="thumbnail" src="Portfolio_web_size/GlossyText.png" alt=""/>
-								</a>
-							</div>
 							
-							<div class="col-sm-4" id="lineObject">
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
 								<a class="gallery-item" href="Rendered_Images/NightFieldWithBall.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/NightFieldWithBall.jpg" alt=""/>
 								</a>
 							</div>
+						
 							
-							<div class="col-sm-4" id="lineObject">
+						</div>
+						
+						<div class="row picture">
+												
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
 								<a class="gallery-item" href="Rendered_Images/Cups.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/Cups.jpg" alt=""/>
 								</a>
 							</div>
-						</div>
-						
-						<div class="row picture">
-							<div class="col-sm-4" id="lineObject">
-								<a class="gallery-item" href="Rendered_Images/Chain.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
+								<a class="gallery-item" href="Rendered_Images/Chain.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/Chain.png" alt=""/>
 								</a>
 							</div>
-						
-							<div class="col-sm-4" id="lineObject">
-								<a class="gallery-item" href="Rendered_Images/Bowl_with_cloth.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+							
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
+								<a class="gallery-item" href="Rendered_Images/Bowl_with_cloth.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/Bowl_with_cloth.png" alt=""/>
 								</a>
 							</div>
+						</div>
 						
-							<div class="col-sm-4" id="lineObject">
+						
+						<div class="row picture">
+						
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
 								<a class="gallery-item" href="Rendered_Images/Bear.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/Bear.jpg" alt=""/>
 								</a>
 							</div>
-						</div>
-						
-						
-						<div class="row picture">
-							<div class="col-sm-4" id="lineObject">
-								<a class="gallery-item" href="Rendered_Images/Pool_Balls3.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+							
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
+								<a class="gallery-item" href="Rendered_Images/Pool_Balls3.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/Pool_Balls.png" alt=""/>
 								</a>
-							
 							</div>
 							
-							<div class="col-sm-4" id="lineObject">
-								<a class="gallery-item" href="Rendered_Images/PlanetExplosion.png" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
+								<a class="gallery-item" href="Rendered_Images/PlanetExplosion.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/PlanetExplosion.png" alt=""/>
 								</a>
 							</div>
 						</div>
 						
 						
-						
-						
 						<div class="row animation">
 							<h2 class="rowName">Animation</h2>
+							
+							<div class="col-sm-4 " id="lineObject">
+								<!-- video from you-tube--> 
+								<iframe class="animation-item" src="https://www.youtube.com/embed/D9obtBaLcZo" frameborder="0" allowfullscreen></iframe>
+							</div>
+							
+							<div class="col-sm-4 " id="lineObject">
+								<!-- video from you-tube--> 
+								<iframe  class="animation-item" src="https://www.youtube.com/embed/2xUEntvC_68" frameborder="0" allowfullscreen></iframe>
+							</div>
+							
 							<div class="col-sm-4 " id="lineObject">
 								<!-- video from you-tube--> 
 								<iframe class="animation-item" src="https://www.youtube.com/embed/-in0JNv_5Js" frameborder="0" allowfullscreen></iframe>
-							</div>
+							</div>			
 							
-							<div class="col-sm-4" id="lineObject">
-								<iframe  class="animation-item" src="https://www.youtube.com/embed/NHIKHmEdW4U" frameborder="0" allowfullscreen> </iframe>
+						</div>
+						
+						<div class="row animation">
+							
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
+								<iframe  class="animation-item" src="https://www.youtube.com/embed/8wubdmrrz8E" frameborder="0" allowfullscreen> </iframe>
 							</div>
 						
 					
-							<div class="col-sm-4" id="lineObject">
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
 								<video  class="animation-item" controls>
-									<source src="Rendered Images/DissolvingTextInnaEdition.mp4">
+									<source src="Rendered_Images/DissolvingTextInnaEdition.mp4">
+									 Your browser does not support the video tag.
 								</video>
-							</div>
+							</div>						
+							
 						</div>
 						
 						
 						<div class="row logo">
 						<h2 class="rowName">Logo</h2>
-							<div class="col-sm-4" id="lineObject">
+							<div class="col-xs-12 col-sm-4 col-md-4" id="lineObject">
 								<a class="gallery-item" href="Rendered_Images/Plakat.jpg" data-lightbox="example-set" data-title="Click the right half of the image to move forward.">
 									<img class="thumbnail" src="Portfolio_web_size/Plakat.jpg" alt=""/>
 								</a>
@@ -247,45 +313,53 @@
 					</div>-->
 					
 				</div>
-			</div>
+			
 		</section>	
 		
 		
 			<footer class="container-fluid">
 				<div class="row">
-					<div class="col-sm-4">
-					
+					<div class="col-xs-1 col-sm-2 col-md-4">					
 					</div>
-					<div class="col-sm-4">
-						<ul>
-							<li class="col-sm-2">
-							  <a href="mailto:max.savin3@gmail.com">
+					
+					<div class="col-xs-10 col-sm-8 col-md-4">
+						<ul class="social">
+							<li class="media">
+							  <a href="contacts.php">
 								<img src="imForSite/Envelope_white.jpg" alt="envelope icon">
 							  </a>
 							</li>
-							<li class="col-sm-2">
-								<a href="https://ua.linkedin.com/in/maksim-savin-56355769" target="_blank">
-									<img src="http://www.citi.com/ventures/images/logos/linkedin.png" alt="icon of LinkedIn service">
+							<li class="media">
+								<a href="https://www.linkedin.com/in/maksymsavin/" target="_blank">
+									<img src="imForSite/Linkedin.png" alt="icon of LinkedIn service">
 								</a>
 							</li>
-							
+							<li class="media">
+								<a href="https://github.com/Maksym-UA" target="_blank">
+									<img src="imForSite/github-logo-white.png" alt="Github icon">
+								</a>
+							</li>							
 						</ul>
 					</div>
 					
-					<div class="col-sm-4">
-						<div id="qoo-counter">
-							<a href="http://studylance.ru/" title="Биржа студенческих работ - курсовые, дипломные, рефераты, контрольные, репетиторы">
-								<img src="http://studylance.ru/counter/standard/016.png" alt="Биржа студенческих работ - курсовые, дипломные, рефераты, контрольные, репетиторы">
-								<div id="qoo-counter-visits"></div>
-								<div id="qoo-counter-views"></div>
-							</a>
-						</div>
+					<div class="col-xs-1 col-sm-2 col-md-4">						
 					</div>
 				</div>
 			</footer>
 			
-			<!-- script -->
-		<script type="text/javascript" src="http://qoo.by/counter.js"></script>	
+		<!-- script -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		
+		<!--[if lt IE 9]>
+		<script type="text/javascript">alert("Your browser does not support the canvas tag.");</script>
+		<![endif]-->
+		<script src="processing.js" type="text/javascript"></script>
+		<script type="text/javascript">
+		// convenience function to get the id attribute of generated sketch html element
+		function getProcessingSketchId () { return 'w304edited'; }
+		</script>
+		
+		
 		<script type='text/javascript' src='animation.js'></script>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>

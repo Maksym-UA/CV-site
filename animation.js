@@ -32,17 +32,46 @@ $(document).ready(function(){
 		
 	});
 	
+	// Pause the video when the modal is closed
+    $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+        // Remove the src so the player itself gets removed, as this is the only
+        // reliable way to ensure the video stops playing in IE
+        $("#trailer-video-container").empty();
+    });
+	
+    // Start playing the video whenever the trailer modal is opened
+    $(document).on('click', '.animation-item', function (event) {
+        var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+        var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+        $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+            'id': 'trailer-video',
+            'type': 'text-html',
+            'src': sourceUrl,
+            'frameborder': 0,
+			'allowfullscreen':'true'
+		}));
+    });
+	
 	$('#selectAll').click(function(){
-		$('.row.picture, .row.animation, .row.logo, .rowName').fadeIn();
-		$('#animSel,#graphicSel, #logoSel').removeClass('active');
+		$('.row.web, .row.picture, .row.animation, .row.logo, .rowName').fadeIn();
+		$('#webSel, #animSel,#graphicSel, #logoSel').removeClass('active');
 		$(this).addClass('active');
 		
 	});
 	
+	$('#webSel').click(function(){
+		$('.row.picture, .row.animation, .row.logo, .rowName').hide();
+		$('#selectAll, #graphicSel, #animSel, #logoSel').removeClass('active');
+		$(this).addClass('active');
+		$('.row.web').each(function(){
+			$(this).fadeIn();
+		});
+	});
+	
 	
 	$('#graphicSel').click(function(){
-		$('.row.animation, .row.logo, .rowName').hide();
-		$('#selectAll, #animSel, #logoSel').removeClass('active');
+		$('.row.web, .row.animation, .row.logo, .rowName').hide();
+		$('#webSel, #selectAll, #animSel, #logoSel').removeClass('active');
 		$(this).addClass('active');
 		$('.row.picture').each(function(){
 			$(this).fadeIn();
@@ -52,8 +81,8 @@ $(document).ready(function(){
 	
 	
 	$('#animSel').click(function(){
-		$('.row.picture, .row.logo, .rowName').hide();
-		$('#selectAll, #graphicSel, #logoSel').removeClass('active');
+		$('.row.web, .row.picture, .row.logo, .rowName').hide();
+		$('#webSel, #selectAll, #graphicSel, #logoSel').removeClass('active');
 		$(this).addClass('active');
 		$(".row.animation").each(function(){
 			 $(this).fadeIn();
@@ -61,11 +90,56 @@ $(document).ready(function(){
 	});
 	
 	$('#logoSel').click(function(){
-		$('.row.picture, .row.animation, .rowName').hide();
-		$('#selectAll, #graphicSel, #animSel').removeClass('active');
+		$('.row.web, .row.picture, .row.animation, .rowName').hide();
+		$('#webSel, #selectAll, #graphicSel, #animSel').removeClass('active');
 		$(this).addClass('active');
 		$('.row.logo').each(function(){
 			$(this).fadeIn()
 			});	
+	});
+	
+	
+	/*--------------mobileSelection ---------------------*/
+	$('#mselectAll').click(function(){
+		$('.row.web, .row.picture, .row.animation, .row.logo, .rowName').fadeIn();
+		$('#webSel, #animSel,#graphicSel, #logoSel').removeClass('active');
+		$(this).addClass('active');
+	});
+	
+	$('#mwebSel').click(function(){
+		$('.row.picture, .row.animation, .row.logo, .rowName').hide();
+		$('#mselectAll, #selectAll, #animSel, #logoSel').removeClass('active');
+		$(this).addClass('active');
+		$('.row.web').each(function(){
+			$(this).fadeIn();
+		});		
+	});
+	
+	$('#mgraphicSel').click(function(){
+		$('.row.web, .row.animation, .row.logo, .rowName').hide();
+		$('#webSel, #selectAll, #animSel, #logoSel').removeClass('active');
+		$(this).addClass('active');
+		$('.row.picture').each(function(){
+			$(this).fadeIn();
+		});		
+	});
+	
+	$('#manimSel').click(function(){
+		$('.row.web, .row.picture, .row.logo, .rowName').hide();
+		$('#webSel, #selectAll, #graphicSel, #logoSel').removeClass('active');
+		$(this).addClass('active');
+		$(".row.animation").each(function(){
+			 $(this).fadeIn();
+		})		
+	});
+	
+	$('#mlogoSel').click(function(){
+		$('.row.web, .row.picture, .row.animation, .rowName').hide();
+		$('#webSel, #selectAll, #graphicSel, #animSel').removeClass('active');
+		$(this).addClass('active');
+		$('.row.logo').each(function(){
+			$(this).fadeIn()
+			});	
+		
 	});
 });
